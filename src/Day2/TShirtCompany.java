@@ -1,6 +1,5 @@
 package Day2;
 
-import javafx.scene.Scene;
 
 import java.util.Scanner;
 
@@ -13,14 +12,20 @@ public class TShirtCompany {
     public void Customers() {
         int TShirt = 50;
 
-        for (int i = 0; i < TShirt;) {
+        for (int i = 0; i < TShirt; ) {
             Scanner sc = new Scanner(System.in);
             int count = sc.nextInt();
             String colour = sc.next();
             char size = sc.next().charAt(0);
-            System.out.println("Tshirt Count= " + count + "TShirt color= " + colour + "TShirt" + size);
-            int add = i+count;
-           i=add;
+
+            i = i + count;
+
+            if (i < 50) {
+                System.out.println("Tshirt Count= " + count + "TShirt color= " + colour + "TShirt" + size);
+            } else {
+                System.out.println("Please enter minimum count");
+                i = i - count;
+            }
 
         }
 
