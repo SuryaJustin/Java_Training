@@ -12,7 +12,7 @@ public class TShirtCompany {
     public void Customers() {
         int TShirt = 50;
 
-        for (int i = 0; i < TShirt; ) {
+        for (int i = 0; i <TShirt; ) {
             Scanner sc = new Scanner(System.in);
             int count = sc.nextInt();
             String colour = sc.next();
@@ -20,7 +20,7 @@ public class TShirtCompany {
 
             i = i + count;
 
-            if (i < 50) {
+            if (i <=50) {
                 System.out.println("Tshirt Count= " + count + "TShirt color= " + colour + "TShirt" + size);
             } else {
                 System.out.println("Please enter minimum count");
